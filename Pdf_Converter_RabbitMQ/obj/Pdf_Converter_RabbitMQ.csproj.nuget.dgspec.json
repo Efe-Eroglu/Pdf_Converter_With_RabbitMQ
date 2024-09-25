@@ -4,6 +4,71 @@
     "C:\\Users\\efe_e\\source\\repos\\Pdf_Converter_RabbitMQ\\Pdf_Converter_RabbitMQ\\Pdf_Converter_RabbitMQ.csproj": {}
   },
   "projects": {
+    "C:\\Users\\efe_e\\source\\repos\\Pdf_Converter_RabbitMQ\\PdfConverterConsumer\\PdfConverterConsumer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\efe_e\\source\\repos\\Pdf_Converter_RabbitMQ\\PdfConverterConsumer\\PdfConverterConsumer.csproj",
+        "projectName": "PdfConverterConsumer",
+        "projectPath": "C:\\Users\\efe_e\\source\\repos\\Pdf_Converter_RabbitMQ\\PdfConverterConsumer\\PdfConverterConsumer.csproj",
+        "packagesPath": "C:\\Users\\efe_e\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\efe_e\\source\\repos\\Pdf_Converter_RabbitMQ\\PdfConverterConsumer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\efe_e\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\efe_e\\source\\repos\\Pdf_Converter_RabbitMQ\\Pdf_Converter_RabbitMQ\\Pdf_Converter_RabbitMQ.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +92,11 @@
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\efe_e\\source\\repos\\Pdf_Converter_RabbitMQ\\PdfConverterConsumer\\PdfConverterConsumer.csproj": {
+                "projectPath": "C:\\Users\\efe_e\\source\\repos\\Pdf_Converter_RabbitMQ\\PdfConverterConsumer\\PdfConverterConsumer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -39,6 +108,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
