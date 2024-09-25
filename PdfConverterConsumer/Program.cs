@@ -1,7 +1,7 @@
 ﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
+using Aspose.Words;
+using System.IO;
 
 namespace PdfConverterConsumer
 {
@@ -22,25 +22,14 @@ namespace PdfConverterConsumer
                 var consumer = new EventingBasicConsumer(channel);
                 consumer.Received += (model, ea) =>
                 {
-                    var body = ea.Body.ToArray();
-                    string outputPdfPath = "convertedFile.pdf"; 
+                    // Kuyruktan alınan dosya yolunu al
+                    string wordFilePath = System.Text.Encoding.UTF8.GetString(ea.Body.ToArray());
+                    string outputPdfPath = Path.ChangeExtension(wordFilePath, ".pdf"); // Çıktı PDF dosyası için yol
 
-                    using (MemoryStream ms = new MemoryStream(body))
-                    {
-                        using (FileStream fs = new FileStream(outputPdfPath, FileMode.Create))
-                        {
-                            Document doc = new Document();
-                            PdfWriter writer = PdfWriter.GetInstance(doc, fs);
-                            doc.Open();
+                    // Word dosyasını PDF'ye dönüştür
+                    ConvertWordToPdf(wordFilePath, outputPdfPath);
 
-                            // Burada dosya içeriğini PDF'ye ekleyebilirsiniz
-                            doc.Add(new Paragraph("Dosya başarıyla PDF'ye çevrildi!"));
-
-                            doc.Close();
-                        }
-                    }
-
-                    Console.WriteLine(" [x] Dosya PDF'ye çevrildi ve kaydedildi.");
+                    Console.WriteLine(" [x] Dosya PDF'ye dönüştürüldü ve kaydedildi: " + outputPdfPath);
                 };
 
                 channel.BasicConsume(queue: "pdf_conversion_queue",
@@ -50,6 +39,12 @@ namespace PdfConverterConsumer
                 Console.WriteLine(" [x] Kuyruktan mesajlar bekleniyor...");
                 Console.ReadLine();  // Konsol açık kalsın
             }
+        }
+
+        private static void ConvertWordToPdf(string wordFilePath, string pdfFilePath)
+        {
+            Document doc = new Document(wordFilePath);
+            doc.Save(pdfFilePath); 
         }
     }
 }

@@ -25,3 +25,12 @@ C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\De
 C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\Debug\net8.0-windows\PdfConverterConsumer.pdb
 C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\obj\Debug\net8.0-windows\Pdf_Converter_RabbitMQ.csproj.AssemblyReference.cache
 C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\obj\Debug\net8.0-windows\Pdf_Converter_RabbitMQ.csproj.CopyComplete
+C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\Debug\net8.0-windows\Aspose.Words.Pdf2Word.dll
+C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\Debug\net8.0-windows\Aspose.Words.dll
+C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\Debug\net8.0-windows\SkiaSharp.dll
+C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\Debug\net8.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\Debug\net8.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\efe_e\source\repos\Pdf_Converter_RabbitMQ\Pdf_Converter_RabbitMQ\bin\Debug\net8.0-windows\runtimes\win-x86\native\libSkiaSharp.dll

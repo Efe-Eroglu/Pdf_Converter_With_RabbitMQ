@@ -28,7 +28,7 @@ namespace Pdf_Converter_RabbitMQ
         }
 
         // RabbitMQ'ya dosya gönderme fonksiyonu
-        public void SendMessageToQueue(string filePath)
+        private void SendMessageToQueue(string filePath)
         {
             var factory = new ConnectionFactory() { HostName = "localhost" };
             using (var connection = factory.CreateConnection())
@@ -40,17 +40,18 @@ namespace Pdf_Converter_RabbitMQ
                                      autoDelete: false,
                                      arguments: null);
 
-                // Dosyayý byte array'e çeviriyoruz
-                byte[] fileBytes = File.ReadAllBytes(filePath);
+                // Dosya yolunu byte array'e çeviriyoruz
+                byte[] filePathBytes = System.Text.Encoding.UTF8.GetBytes(filePath);
 
-                // RabbitMQ kuyruðuna dosya içeriðini gönderiyoruz
+                // RabbitMQ kuyruðuna dosya yolunu gönderiyoruz
                 channel.BasicPublish(exchange: "",
                                      routingKey: "pdf_conversion_queue",
                                      basicProperties: null,
-                                     body: fileBytes);
+                                     body: filePathBytes);
 
                 Console.WriteLine(" [x] Dosya kuyruða gönderildi.");
             }
         }
+
     }
 }

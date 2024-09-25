@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PdfConverterConsumer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffb14c0659f6310774186352e8662354fff79fed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57101c7601c2c92e2108c6b19ef90e3cf37921db")]
 [assembly: System.Reflection.AssemblyProductAttribute("PdfConverterConsumer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PdfConverterConsumer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
